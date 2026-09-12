@@ -87,9 +87,6 @@ module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "6.0.0"
 
-  name   = "blog_new"
-  vpc_id = module.blog_vpc.vpc_id
-
   ingress_rules = {
     http = {
       from_port   = 80
